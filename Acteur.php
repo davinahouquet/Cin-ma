@@ -11,6 +11,7 @@ class Acteur{
     public function __construct(string $nom, string $prenom, DateTime $dateNaissance, string $roles){
         $this->_Nom = $nom;
         $this->_Prenom = $prenom;
+        $this->_Sexe = $sexe;
         $this->_DateNaissance = new DateTime($dateNaissance);
         $this->_Roles = [];
     }
