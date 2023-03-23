@@ -5,15 +5,13 @@ class Realisateur{
     private string $_Prenom;
     private string $_Sexe;
     private DateTime $_DateTime;
-    private array $_FilmographieRealisateur;
 }
 
-    public function __construct(string $nom, string $prenom, string $sexe, DateTime $dateTime, array $filmographieRealisateur){
+    public function __construct(string $nom, string $prenom, string $sexe, DateTime $dateTime){
         $this->_Nom = $nom;
         $this->_Prenom = $prenom;
         $this->_Sexe = $sexe;
         $this->_DateNaissance = new DateTime($dateNaissance);
-        $this->_FilmographieRealisateur = [];
     }
     public function getNom(){
         return $this->_Nom;
@@ -39,10 +37,4 @@ class Realisateur{
     public function setDateNaissance(DateTime $dateNaisance){
         $this->_DateNaissance = $dateNaissance;
     }
-    public function getFilmographieRealisateur(){
-        return $this->_FilmographieRealisateur;
-    }
-    public function setFilmographieRealisateur(string $filmographieRealisateur){
-        $this->_FilmographieRealisateur = $filmographieRealisateur;
-    }
-?>
+    ?>
