@@ -17,4 +17,40 @@ class Film{
         $this->_Casting = [];
     }
 
+    public function getTitre(){
+        return $this->_Titre;
+    }
+    public function setTitre(string $titre){
+        $this->_Titre = $titre;
+    }
+    public function getDateSortie(){
+        return $this->_DateSortie;
+    }
+    public function setDateSortie(DateTime $dateSortie){
+        $this->_DateSortie = $dateSortie;
+    }
+    public function getDuree(){
+        return $this->_Duree;
+    }
+    public function setDuree(Duree $duree){
+        $this->_Duree = $duree;
+    }
+    public function getRealisateur(){
+        return $this->_Realisateur;
+    }
+    public function setRealisateur(Realisateur $realisateur){
+        $this->_Realisateur = $realisateur;
+    }
+    public function getSynopsis(){
+        return $this->_Synopsis;
+    }
+    public function setSynopsis(string $synopsis){
+        $this->_Synopsis = $synopsis;
+    }
+    public function getCasting(){
+        return $this->_Casting;
+    }
+    public function setCasting(array $casting){
+        $this->_Casting = $casting;
+    }
 ?>
