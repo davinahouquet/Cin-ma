@@ -21,4 +21,5 @@ class Genre{
         $this->_GenreNom = $genreNom;
     }
 
+    //Fonction qui permet de lister les films par genre
 ?>

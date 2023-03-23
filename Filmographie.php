@@ -8,4 +8,6 @@ class Filmogrpahie{
     public function __construct($array $filmsrealises){
         $this->_FilmsRealises = [];
     }
+
+    //Fonction qui liste la filmographie d'un réalisateur
 ?>

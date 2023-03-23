@@ -20,10 +20,10 @@ function chargerClasse($classe)
 spl_autoload_register('chargerClasse');
 
 //Création de différents réalisateurs
-$realisateur1 = ("Nom", "Prénom", "Sexe", "DateNaissance");
+// $realisateur1 = new Realisateur ("Nom", "Prénom", "Sexe", "DateNaissance");
 
 //Création de différents acteurs
-
+// $acteur1 = new Acteur ("Nom", "Prénom", "Sexe", "DateNaissance");
 
 //Création de différents films
 

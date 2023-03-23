@@ -28,4 +28,7 @@ class Casting{
     public function setCastingActeur(string $castingActeur){
         $this->_CastingActeur = $castingActeur;
     }
+
+    /*Fonction qui permet de lister le casting d'un film
+    (Dans tel film, ce rôle a été incarné par cet acteur, ce rôle a été incarné par cet acteur...)*/
 ?>

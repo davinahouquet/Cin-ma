@@ -22,4 +22,6 @@ class Role{
     public function setActeurRole(array $acteurRole){
         $this->_ActeurRole = $acteurrole;
     }
+
+    //Fonction qui permet de lister les acteurs qui ont joué le même rôle
 ?>

@@ -4,14 +4,14 @@ class Acteur{
     private string $_Nom;
     private string $_Prenom;
     private string $_sexe;
-    private DateTime $_DateNaissance;
+    private string $_DateNaissance;
 
 
-    public function __construct(string $nom, string $prenom, DateTime $dateNaissance){
+    public function __construct(string $nom, string $prenom, string $sexe, string $dateNaissance){
         $this->_Nom = $nom;
         $this->_Prenom = $prenom;
         $this->_Sexe = $sexe;
-        $this->_DateNaissance = new DateTime($dateNaissance);
+        $this->_DateNaissance =$dateNaissance;
     }
     public function getNom(){
         return $this->_Nom;
@@ -34,9 +34,11 @@ class Acteur{
     public function getDateNaissance(){
         return $this->_DateNaissance;
     }
-    public function setDateNaissance(DateTime $dateNaisance){
+    public function setDateNaissance(string $dateNaisance){
         $this->_DateNaissance = $dateNaissance;
     }
+
+    //Fonction qui liste la filmographie d'un acteur
 }
 
 ?>
