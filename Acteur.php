@@ -5,15 +5,13 @@ class Acteur{
     private string $_Prenom;
     private string $_sexe;
     private DateTime $_DateNaissance;
-    private string $_Roles;
 
 
-    public function __construct(string $nom, string $prenom, DateTime $dateNaissance, string $roles){
+    public function __construct(string $nom, string $prenom, DateTime $dateNaissance){
         $this->_Nom = $nom;
         $this->_Prenom = $prenom;
         $this->_Sexe = $sexe;
         $this->_DateNaissance = new DateTime($dateNaissance);
-        $this->_Roles = [];
     }
     public function getNom(){
         return $this->_Nom;
@@ -38,12 +36,6 @@ class Acteur{
     }
     public function setDateNaissance(DateTime $dateNaisance){
         $this->_DateNaissance = $dateNaissance;
-    }
-    public function getRoles(){
-        return $this->_Roles;
-    }
-    public function setRoles(string $roles){
-        $this->_Roles = $roles;
     }
 }
 
