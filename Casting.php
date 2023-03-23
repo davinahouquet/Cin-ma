@@ -10,4 +10,22 @@ class Casting{
         $this->_CastingRole = $castingRole;
         $this->_CastingActeur = $castingActeur;
     }
+    public function getCastingFilm(){
+        return $this->_CastingFilm;
+    }
+    public function setCastingFilm(string $castingFilm){
+        $this->_CastingFilm = $castingFilm;
+    }
+    public function getCastingRole(){
+        return $this->_CastingRole;
+    }
+    public function setCastingRole(string $castingrole){
+        $this->_CastingRole = $castingRole;
+    }
+    public function getCastingActeur(){
+        return $this->_CastingActeur;
+    }
+    public function setCastingActeur(string $castingActeur){
+        $this->_CastingActeur = $castingActeur;
+    }
 ?>
