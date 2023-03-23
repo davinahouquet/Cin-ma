@@ -11,3 +11,14 @@ Un résumé du film (synopsis)  pourra  éventuellement être  renseigné.  Chaq
     seule fois (dans la mesure où ce rôle a été incarné par plusieurs acteurs.)</p>
 <h2>Résultat</h2>
 
+<?php
+
+function chargerClasse($classe)
+{
+    require $classe . '.php';
+}
+spl_autoload_register('chargerClasse');
+
+
+
+?>
