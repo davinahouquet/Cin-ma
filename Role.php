@@ -9,4 +9,17 @@ class Role{
         $this->_RoleNom = $roleNom;
         $this->_ActeurRole = [];
     }
+
+    public function getRoleNom(){
+        return $this->_RoleNom;
+    }
+    public function setRoleNom(string $roleNom){
+        $this->_RoleNom = $roleNom;
+    }
+    public function getActeurRole(){
+        return $this->_ActeurRole;
+    }
+    public function setActeurRole(array $acteurRole){
+        $this->_ActeurRole = $acteurrole;
+    }
 ?>
