@@ -19,6 +19,27 @@ function chargerClasse($classe)
 }
 spl_autoload_register('chargerClasse');
 
+//Création de différents réalisateurs
 
+
+//Création de différents acteurs
+
+
+//Création de différents films
+
+
+//Création de différents genre
+
+
+/* Série de tests de méthodes */
+// Test du listage des acteurs ayant incarné le même rôle
+
+// Test du listage d'un casting d'un film
+
+// Test du listage des films par genre
+
+// Test du listage de la filmographie d'un acteur
+
+// Test du listage de la filmographie d'un réalisateur
 
 ?>
