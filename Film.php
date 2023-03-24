@@ -60,6 +60,17 @@ class Film
     {
         $this->_Synopsis = $synopsis;
     }
-
     //Méthodes pour ajouterTableau
+    public function addCasting(Casting $casting)
+    {
+        $this->_Casting[] = $casting;
+    }
+
+    public function afficherCasting()
+    {
+        $result = "Dans le film " . $this->getTitre();
+        foreach ($this->_Casting as $casting) {
+            $result .=  ", le rôle de" . $casting;
+        }
+    }
 }

@@ -5,6 +5,7 @@ class Realisateur{
     private string $_Prenom;
     private string $_Sexe;
     private string $_DateNaissance;
+    private Film $_Film;
 
     public function __construct(string $nom, string $prenom, string $sexe, string $dateNaissance){
         $this->_Nom = $nom;

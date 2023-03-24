@@ -5,6 +5,8 @@ class Acteur{
     private string $_Prenom;
     private string $_Sexe;
     private string $_DateNaissance;
+    private array $_Casting;
+
 
 
     public function __construct(string $nom, string $prenom, string $sexe, string $dateNaissance){
@@ -12,6 +14,7 @@ class Acteur{
         $this->_Prenom = $prenom;
         $this->_Sexe = $sexe;
         $this->_DateNaissance =$dateNaissance;
+        $this->_Casting = [];
     }
     public function getNom(){
         return $this->_Nom;
@@ -39,7 +42,8 @@ class Acteur{
         $this->_DateNaissance = $dateNaissance;
     }
 
-    //Fonction qui liste la filmographie d'un acteur
-
+    public function addCasting(Casting $casting){
+        $this->_Casting[] = $casting;
+    }
 }
 ?>

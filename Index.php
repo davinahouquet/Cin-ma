@@ -19,15 +19,17 @@ function chargerClasse($classe)
     require $classe . '.php';
 }
 spl_autoload_register('chargerClasse');
-//Création de différents films
-$batmanLeDefi = new Film ("Batman : Le Défi", "1992", 126, $timBurton, "Synopsis");
-$batmanForever = new Film ("Batman Forever", "1995", 121, $joelSchumacher, "Synopsis");
-$batmanEtRobin = new Film ("Batman et Robin", "1997", 125, $joelSchumacher, "Synopsis");
+
+//IMPORTANT : Il faut déclarer les $variables dans l'ordre (sinon undefined variable) = les déclarer d'abord pour s'en servir dans les lignes dessous
 
 //Création de différents réalisateurs
 $timBurton = new Realisateur ("Burton", "Tim", "Homme", "25 août 1958");
 $joelSchumacher = new Realisateur ("Schumacher", "Joel ", "Homme", "22 juin 2020");
-// $realisateur3 = new Realisateur ("Nom", "Prénom", "Sexe", "DateNaissance");
+
+//Création de différents films
+$batmanLeDefi = new Film ("Batman : Le Défi", "1992", 126, $timBurton, "Synopsis");
+$batmanForever = new Film ("Batman Forever", "1995", 121, $joelSchumacher, "Synopsis");
+$batmanEtRobin = new Film ("Batman et Robin", "1997", 125, $joelSchumacher, "Synopsis");
 
 //Création de différents acteurs
 $michaelKeaton = new Acteur ("Keaton", "Michael", "Homme", "5 septembre 1951");
@@ -62,7 +64,9 @@ $casting1 = new Casting ($batmanLeDefi, $batman, $michaelKeaton);
 // $casting1 = new Casting ($film1, $role1, $acteur1);
 // $casting1 = new Casting ($film1, $role1, $acteur1);
 
-echo $casting1->getRole();
+echo $casting1->afficherCasting();
+
+
 // $role1 = new Role()
 
 /* Série de tests de méthodes */

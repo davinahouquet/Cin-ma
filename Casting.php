@@ -1,38 +1,42 @@
 <?php
 
 class Casting{
-    private film $_CastingFilm;
+    private film $_Film;
     private role $_Role;
-    private acteur $_CastingActeur;
+    private acteur $_Acteur;
 
-    public function __construct(film $castingFilm, role $role, acteur $castingActeur){
-        $this->_CastingFilm = $castingFilm;
+    public function __construct(film $film, role $role, acteur $acteur){
+        $this->_Film = $film;
         $this->_Role = $role;
-        $this->_CastingActeur = $castingActeur;
-        
+        $this->_Acteur = $acteur;
+        $this->_Film->addCasting($this);
+        $this->_Acteur->addCasting($this);
+        $this->_Role->addCasting($this);
     }
-    public function getCastingFilm(){
-        return $this->_CastingFilm->getTitre(). " " .$this->_CastingFilm->getDateSortie();
+    public function getFilm(){
+        return $this->_Film->getTitre();
     }
-    public function setCastingFilm($castingFilm){
-        $this->_CastingFilm = $castingFilm;
+    public function setFilm($film){
+        $this->_Film = $film;
     }
     public function getRole(){
         return $this->_Role->getRoleNom();
     }
-    public function setCastingRole($castingRole){
-        $this->_Role = $castingRole;
+    public function setRole($role){
+        $this->_Role = $role;
 
     }
-    public function getCastingActeur(){
-        return $this->_CastingActeur;
+    public function getActeur(){
+        return $this->_Acteur->getPrenom(). " " .$this->_Acteur->getNom();
     }
 
-    public function setCastingActeur($castingActeur){
-        $this->_CastingActeur = $castingActeur;
+    public function setActeur($acteur){
+        $this->_Acteur = $acteur;
     }
-
-    /*Fonction qui permet de lister le casting d'un film
+    /*Fonction qui permet de lister le  d'un film
     (Dans tel film, ce rôle a été incarné par cet acteur, ce rôle a été incarné par cet acteur...)*/
+    // public function afficherCasting(){
+    //     $result = "Dans le film " .$this->getFilm(). ", le rôle de " .$this->getRole(). " a été incarné par " .$this->getActeur(). " .";
+    //     return $result;}
 }
 ?>

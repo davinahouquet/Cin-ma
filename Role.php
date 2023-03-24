@@ -3,11 +3,13 @@
 class Role{
     private string $_RoleNom;
     private Acteur $_Acteur;
+    private array $_Casting;
 // On utilise array pour dresser une liste des acteurs qui ont joué le rôle en question ($_RoleNom)
 
     public function __construct(string $roleNom, Acteur $acteur){
         $this->_RoleNom = $roleNom;
         $this->_Acteur = $acteur;
+        $this->_Casting = [];
     }
 
     public function getRoleNom(){
@@ -23,8 +25,9 @@ class Role{
     public function setActeurRole(Acteur $acteur){
         $this->_Acteur = $acteur;
     }
+
+    public function addCasting(Casting $casting){
+    $this->_Casting[] = $casting;
 }
-    //Fonction qui permet de lister les acteurs qui ont joué le même rôle
-
-
+}
 ?>
