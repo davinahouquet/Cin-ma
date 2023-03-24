@@ -3,11 +3,7 @@
 class Acteur{
     private string $_Nom;
     private string $_Prenom;
-<<<<<<< HEAD
     private string $_Sexe;
-=======
-    private string $_sexe;
->>>>>>> 704311b613a2d39ba25eba5836dc785582346805
     private string $_DateNaissance;
 
 
@@ -38,21 +34,12 @@ class Acteur{
     public function getDateNaissance(){
         return $this->_DateNaissance;
     }
-<<<<<<< HEAD
     public function setDateNaissance(string $dateNaissance){
-=======
-    public function setDateNaissance(string $dateNaisance){
->>>>>>> 704311b613a2d39ba25eba5836dc785582346805
+
         $this->_DateNaissance = $dateNaissance;
     }
 
     //Fonction qui liste la filmographie d'un acteur
-<<<<<<< HEAD
-
 
 }
-=======
-}
-
->>>>>>> 704311b613a2d39ba25eba5836dc785582346805
 ?>

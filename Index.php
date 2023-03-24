@@ -1,24 +1,14 @@
 <h1>Cinéma</h1>
 <p>Vous avez en charge de gérer différentes entités autour de la thématique du cinéma.<br>
-<<<<<<< HEAD
-    Les films seront caractérisés par leur titre, leur date de sortie en France, leur durée <br>
-    (en minutes) ainsi que leur réalisateur (unique, avec nom, prénom, sexe et date de naissance). <br>
-    Un résumé du film (synopsis) pourra éventuellement être renseigné. Chaque film est caractérisé <br>
-    par un seul genre cinématographique (science-fiction, aventure, action, ...).Votre application devra <br>
-    recenser également les acteurs de chacun des films. On désire connaître le nom, le prénom, le sexe et la <br>
-    date de naissance de l’acteur ainsi que le rôle (nom du personnage) joué par l’acteur dans le(s) film(s)<br>
-    concerné(s).Il serait intéressant d'utiliser la notion d'héritage entre classes dans cet exercice. A vous<br>
-    de le mettre en place correctement !Attention, le rôle (par exemple James Bond) ne doit être instancié qu'une<br>
-=======
-Les films seront caractérisés par leur titre, leur date de sortie en France, leur  durée <br>
+Les films seront caractérisés par leur titre, leur date de sortie en France, leur durée <br>
 (en minutes) ainsi que leur réalisateur (unique, avec nom, prénom, sexe et date de naissance). <br>
-Un résumé du film (synopsis)  pourra  éventuellement être  renseigné.  Chaque  film  est  caractérisé <br>
- par  un  seul  genre cinématographique (science-fiction, aventure, action, ...).Votre application devra <br>
- recenser également les acteurs de chacun des films. On désire connaître le nom, le prénom, le sexe et la <br>
- date de naissance de l’acteur ainsi que le rôle (nom du personnage) joué par l’acteur dans le(s) film(s)<br>
-  concerné(s).Il serait intéressant d'utiliser la notion d'héritage entre classes dans cet exercice. A vous<br>
-   de le mettre en place correctement !Attention, le rôle (par exemple James Bond) ne doit être instancié qu'une<br>
->>>>>>> 704311b613a2d39ba25eba5836dc785582346805
+Un résumé du film (synopsis) pourra éventuellement être renseigné. Chaque film est caractérisé <br>
+par un seul genre cinématographique (science-fiction, aventure, action, ...).Votre application devra <br>
+recenser également les acteurs de chacun des films. On désire connaître le nom, le prénom, le sexe et la <br>
+date de naissance de l’acteur ainsi que le rôle (nom du personnage) joué par l’acteur dans le(s) film(s)<br>
+concerné(s).Il serait intéressant d'utiliser la notion d'héritage entre classes dans cet exercice. A vous<br>
+de le mettre en place correctement !Attention, le rôle (par exemple James Bond) ne doit être instancié qu'une<br>
+
     seule fois (dans la mesure où ce rôle a été incarné par plusieurs acteurs.)</p>
 <h2>Résultat</h2>
 
@@ -29,12 +19,10 @@ function chargerClasse($classe)
     require $classe . '.php';
 }
 spl_autoload_register('chargerClasse');
-
-<<<<<<< HEAD
 //Création de différents films
-$batmanLeDefi = new Film ("Batman : Le Défi", "1992", "126", $timBurton, "Synopsis");
-$batmanForever = new Film ("Batman Forever", "1995", "121", $joelSchumacher, "Synopsis");
-$batmanEtRobin = new Film ("Batman et Robin", "1997", "125", $joelSchumacher, "Synopsis");
+$batmanLeDefi = new Film ("Batman : Le Défi", "1992", 126, $timBurton, "Synopsis");
+$batmanForever = new Film ("Batman Forever", "1995", 121, $joelSchumacher, "Synopsis");
+$batmanEtRobin = new Film ("Batman et Robin", "1997", 125, $joelSchumacher, "Synopsis");
 
 //Création de différents réalisateurs
 $timBurton = new Realisateur ("Burton", "Tim", "Homme", "25 août 1958");
@@ -76,19 +64,6 @@ $casting1 = new Casting ($batmanLeDefi, $batman, $michaelKeaton);
 
 echo $casting1->getRole();
 // $role1 = new Role()
-=======
-//Création de différents réalisateurs
-// $realisateur1 = new Realisateur ("Nom", "Prénom", "Sexe", "DateNaissance");
-
-//Création de différents acteurs
-// $acteur1 = new Acteur ("Nom", "Prénom", "Sexe", "DateNaissance");
-
-//Création de différents films
-
-
-//Création de différents genre
-
->>>>>>> 704311b613a2d39ba25eba5836dc785582346805
 
 /* Série de tests de méthodes */
 // Test du listage des acteurs ayant incarné le même rôle
