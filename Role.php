@@ -29,5 +29,6 @@ class Role{
     public function addCasting(Casting $casting){
     $this->_Casting[] = $casting;
 }
+
 }
 ?>

@@ -68,9 +68,10 @@ class Film
 
     public function afficherCasting()
     {
-        $result = "Dans le film " . $this->getTitre();
+        $result = "Dans le film" . $this->getTitre();
         foreach ($this->_Casting as $casting) {
-            $result .=  ", le rôle de" . $casting;
+            $result .=  ", le rôle de " . $casting->getRole()->getRoleNom()." a été incarné par ".$casting->getActeur(). " ";
         }
+        return $result;
     }
 }

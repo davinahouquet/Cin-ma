@@ -20,7 +20,7 @@ class Casting{
         $this->_Film = $film;
     }
     public function getRole(){
-        return $this->_Role->getRoleNom();
+        return $this->_Role;
     }
     public function setRole($role){
         $this->_Role = $role;
@@ -39,4 +39,3 @@ class Casting{
     //     $result = "Dans le film " .$this->getFilm(). ", le rôle de " .$this->getRole(). " a été incarné par " .$this->getActeur(). " .";
     //     return $result;}
 }
-?>

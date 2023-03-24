@@ -60,13 +60,25 @@ $poisonIvy = new Role ("Poison Ivy", $umaThurman);
 $batgirl = new Role("Batgirl", $aliciaSilverstone);
 
 //Création de différents casting
-$casting1 = new Casting ($batmanLeDefi, $batman, $michaelKeaton);
+$batmanLeDefiCasting = new Casting ($batmanLeDefi, $batman, $michaelKeaton);
+$batmanLeDefiCasting1 = new Casting ($batmanLeDefi, $catwoman, $michellePfeiffer);
+$batmanLeDefiCasting2 = new Casting ($batmanLeDefi, $oswaldcobblepot, $dannyDeVito);
+
+$batmanForeverCasting = new Casting ($batmanForever, $batman, $valKilmer);
+$batmanForeverCasting1 = new Casting ($batmanForever, $sphinx, $jimCarrey);
+$batmanForeverCasting2 = new Casting ($batmanForever, $sugar, $drewBarrymore);
+
+$batmanEtRobinCasting = new Casting ($batmanEtRobin, $batman, $georgeClooney);
+$batmanEtRobinCasting = new Casting ($batmanEtRobin, $poisonIvy, $umaThurman);
+$batmanEtRobinCasting = new Casting ($batmanEtRobin, $batgirl, $aliciaSilverstone);
+
 // $casting1 = new Casting ($film1, $role1, $acteur1);
 // $casting1 = new Casting ($film1, $role1, $acteur1);
 
-echo $casting1->afficherCasting();
-
-
+// echo $batmanEtRobin->afficherCasting();
+// echo $batmanForever->afficherCasting();
+// echo $batmanEtRobin->afficherCasting();
+echo $batmanLeDefi->afficherCasting();
 // $role1 = new Role()
 
 /* Série de tests de méthodes */
