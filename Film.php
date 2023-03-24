@@ -49,5 +49,5 @@ class Film{
     }
 
     //Méthodes pour ajouterTableau
+    public function test() {}
 }
-?>
