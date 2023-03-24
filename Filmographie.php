@@ -2,6 +2,7 @@
 
 class Filmogrpahie{
     private array $_FilmsRealises;
+<<<<<<< HEAD
 
 //On utilise array pour lister les (films réalisés) par (Réalisateur)
 //On va mettre en lien ces deux classes
@@ -23,4 +24,14 @@ class Filmogrpahie{
     //     }
     // }
 }
+=======
+}
+//On utilise array pour lister les (films réalisés) par (Réalisateur)
+//On va mettre en lien ces deux classes
+    public function __construct($array $filmsrealises){
+        $this->_FilmsRealises = [];
+    }
+
+    //Fonction qui liste la filmographie d'un réalisateur
+>>>>>>> 704311b613a2d39ba25eba5836dc785582346805
 ?>

@@ -34,6 +34,7 @@ class Realisateur{
     public function getDateNaissance(){
         return $this->_DateNaissance;
     }
+<<<<<<< HEAD
     public function setDateNaissance(string $dateNaissance){
         $this->_DateNaissance = $dateNaissance;
     }
@@ -46,5 +47,10 @@ class Realisateur{
     // {
         
     // }
+=======
+    public function setDateNaissance(string $dateNaisance){
+        $this->_DateNaissance = $dateNaissance;
+    }
+>>>>>>> 704311b613a2d39ba25eba5836dc785582346805
 }
     ?>
