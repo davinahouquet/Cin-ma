@@ -104,4 +104,6 @@ echo $michellePfeiffer->afficherFilmsJoues();
 echo $drewBarrymore->afficherFilmsJoues();
 
 echo $batman->listerActeursRole();
+echo $sugar->listerActeursRole();
+
 ?>
