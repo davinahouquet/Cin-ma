@@ -82,6 +82,8 @@ $charlieCasting = new Casting ($charlie, $dylanSanders, $drewBarrymore);
 
 /* Série de tests de méthodes */
 // Test du listage des acteurs ayant incarné le même rôle
+echo $batman->listerActeursRole();
+echo $sugar->listerActeursRole();
 
 
 // Test du listage d'un casting d'un film
@@ -102,8 +104,4 @@ echo $georgeClooney->afficherFilmsJoues();
 echo $umaThurman->afficherFilmsJoues();
 echo $michellePfeiffer->afficherFilmsJoues();
 echo $drewBarrymore->afficherFilmsJoues();
-
-echo $batman->listerActeursRole();
-echo $sugar->listerActeursRole();
-
 ?>
