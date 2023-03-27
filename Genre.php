@@ -1,43 +1,44 @@
 <?php
 
-class Genre{
+ class Genre{
     private string $_genre;
-    private array $_films = [];
+    private array $_filmsGenre = [];
 
     public function __construct(string $genre){
-        $this->_genre = $genre;
-        // $this->_films = [];
+     $this->_genre = $genre;
     }
-    public function getGenre(){
-        return $this->_genre;
+
+    //Getter et setter
+    public function getGenre() : string{
+     return $this->_genre;
     }
     public function setGenre(string $genre){
-        array_push($this->_genre = $genre);
+       $this->_genre = $genre;
     }
-    // public function addFilms(Film $film)
-    // {
-    //     $this->_films[] = $film;
-    // }
-    // public function FilmsGenre()
-    // {
-    //     $result .= "<p> Le genre " . $this->_genre . " est associé à :</p>";
-    //     foreach($this->_film as $films)
-    //     {
-    //         $result .= $films->getTitre() . "<br>";
-    //     }
-    //     return $result;
-    // }
+
+    // Getter et Setter des films dans ce genre
+    public function getFilmsGenre() : array{
+        return $this->_filmsGenre;
+    }
+    public function setFilmsGenre(Film $filmsGenre){
+        $this->_filmsGenre = $filmsGenre;
+    }
+
+    //Méthode pour lister les films du même genre
     public function listerFilmsGenre(){
-        $result = "Le genre $this est associé à " . count($this->_films) . " films :<br>";
-        foreach($this->_films as $film){
-            $result .= "- $film<br>";
-        }
+        $result = "Le genre " .$this->getGenre(). " est associé à " . count($this->_filmsGenre) . " films :<br>";
+        foreach($this->_filmsGenre as $film){
+        $result .= "- $film<br>";
+    }
         return $result;
     }
 
-    /* Méthode __toString de la classe */
+    // Méthode __toString de la classe
     public function __toString(){
         return $this->_genre;
+    }
+    public function addGenre(Film $film){
+        $this->_FilmsGenre[] = $film;
     }
 }
 ?>

@@ -21,15 +21,18 @@ function chargerClasse($classe)
 spl_autoload_register('chargerClasse');
 
 //IMPORTANT : Il faut déclarer les $variables dans l'ordre (sinon undefined variable) = les déclarer d'abord pour s'en servir dans les lignes dessous
+
+//Création de différents genres
 $SF = new Genre ("SF");
+$Policier = new Genre ("Policier");
 //Création de différents réalisateurs
 $timBurton = new Realisateur ("Burton", "Tim", "Homme", "25 août 1958");
 $joelSchumacher = new Realisateur ("Schumacher", "Joel ", "Homme", "22 juin 2020");
 
 //Création de différents films
-$batmanLeDefi = new Film ("Batman : Le Défi", "1992", 126, $timBurton, $SF, "Synopsis");
-$batmanForever = new Film ("Batman Forever", "1995", 121, $joelSchumacher, $SF, "Synopsis");
-$batmanEtRobin = new Film ("Batman et Robin", "1997", 125, $joelSchumacher, $SF, "Synopsis");
+$batmanLeDefi = new Film ("Batman : Le Défi", "1992", 126, $timBurton, "Synopsis", $SF);
+$batmanForever = new Film ("Batman Forever", "1995", 121, $joelSchumacher,"Synopsis", $SF);
+$batmanEtRobin = new Film ("Batman et Robin", "1997", 125, $joelSchumacher, "Synopsis", $SF);
 
 //Création de différents acteurs
 $michaelKeaton = new Acteur ("Keaton", "Michael", "Homme", "5 septembre 1951");
@@ -44,10 +47,7 @@ $georgeClooney = new Acteur (" Clooney", "George", "Homme", "6 mai 1961");
 $umaThurman = new Acteur ("Thurman", "Uma", "Femme", "29 avril 1970");
 $aliciaSilverstone = new Acteur ("Silverstone", "Alicia", "Femme", "4 octobre 1976");
 
-//Création de différents genre
-
 //Création de différents rôles
-
 $batman = new Role("Batman", $michaelKeaton);
 $catwoman = new Role("Catwoman", $michellePfeiffer);
 $oswaldcobblepot = new Role("Oswald Cobblepot", $dannyDeVito);
@@ -74,24 +74,15 @@ $batmanEtRobinCasting = new Casting ($batmanEtRobin, $poisonIvy, $umaThurman);
 $batmanEtRobinCasting = new Casting ($batmanEtRobin, $batgirl, $aliciaSilverstone);
 
 
-// $casting1 = new Casting ($film1, $role1, $acteur1);
-// $casting1 = new Casting ($film1, $role1, $acteur1);
-
-// echo $batmanEtRobin->afficherCasting();
-// echo $batmanForever->afficherCasting();
-// echo $batmanEtRobin->afficherCasting();
-echo $batmanLeDefi->afficherCasting();
-echo $SF->listerFilmsGenre();
-
-// $role1 = new Role()
-
 /* Série de tests de méthodes */
 // Test du listage des acteurs ayant incarné le même rôle
 
 // Test du listage d'un casting d'un film
-
+echo $batmanForever->afficherCasting();
+echo $batmanEtRobin->afficherCasting();
+echo $batmanLeDefi->afficherCasting();
 // Test du listage des films par genre
-
+echo $SF->listerFilmsGenre();
 // Test du listage de la filmographie d'un acteur
 
 // Test du listage de la filmographie d'un réalisateur

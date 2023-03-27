@@ -30,9 +30,13 @@ class Film
     {
         $this->_Titre = $titre;
     }
+
     public function getDateSortie()
     {
         return $this->_DateSortie;
+    }
+    public function setDateSortie(string $_DateSortie){
+        $this->_DateSortie = $dateSortie;
     }
 
     public function getDuree()
@@ -40,21 +44,20 @@ class Film
         return $this->_Duree;
     }
 
-
     public function setDuree(int $duree)
     {
         $this->_Duree = $duree;
     }
+
     public function getRealisateur()
     {
         return $this->_Realisateur;
     }
-
     public function setRealisateur(Realisateur $realisateur)
     {
-
         $this->_Realisateur = $realisateur;
     }
+
     public function getSynopsis()
     {
         return $this->_Synopsis;
@@ -63,21 +66,16 @@ class Film
     {
         $this->_Synopsis = $synopsis;
     }
-    public function getGenre(): string
+
+    public function getGenre(): Genre
     {
-        return $this->_genre->getNomGenre();
+        return $this->_genre->getGenre();
     }
-    public function setGenre(string $genre)
+    public function setGenre(Genre $genre)
     {
         $this->_genre = $genre;
     }
 
-    // public function getGenre(){
-    //     return $this->_genre;
-    // }
-    // public function setGenre(string $genre){
-    //     $this->_genre = $genre;
-    // }
     //Méthodes pour ajouterTableau
     public function addCasting(Casting $casting)
     {
@@ -92,8 +90,15 @@ class Film
         }
         return $result. ".";
     }
+
+    //Méthode _toString()
     public function __toString(){
         return $this->_titre;
+    }
+
+    public function addGenre(Genre $genre)
+    {
+        $this->_filmsGenre[] = getfilmsGenre();
     }
 }
 ?>
