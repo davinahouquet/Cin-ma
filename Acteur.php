@@ -54,13 +54,14 @@ class Acteur{
     public function addFilmsJoues(Film $filmsJoues){
         return $this->_filmsJoues[] = $filmsJoues;
     }
-    //Fonction qui affiche la filmographie d'un acteur
+    //Fonction qui affiche la filmographie d'un acteur = On réutilise _Casting qui était déjà créé
     public function afficherFilmsJoues(){
-        $result = "L'acteur " .$this->getPrenom(). " " .$this->getNom(). " a joué dans les films : ";
-        foreach($this->_filmsJoues as $film){
-            $result .= $film->getTitre(). "<br>";
-        }
-        return $result;
+        $result = "<p>". $this->getNom() . " " . $this->getPrenom() . " a joué dans : ";
+        foreach($this->_Casting as $film)
+    {
+        $result .= $film->getFilm() . ".";
     }
+    return $result;
+}
 }
 ?>

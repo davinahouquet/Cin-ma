@@ -92,4 +92,6 @@ echo $joelSchumacher->afficherFilmsRealises();
 
 // Test du listage de la filmographie d'un acteur
 echo $valKilmer->afficherFilmsJoues();
+echo $georgeClooney->afficherFilmsJoues();
+echo $umaThurman->afficherFilmsJoues();
 ?>
