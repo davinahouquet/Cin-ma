@@ -50,6 +50,7 @@ class Acteur{
         return $this->getprenom(). " " .$this->getNom();
     }
 
+    //Fonction qui affiche la filmographie d'un acteur
 
 }
 ?>

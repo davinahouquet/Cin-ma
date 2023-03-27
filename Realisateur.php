@@ -49,10 +49,10 @@ class Realisateur{
         return $this->_filmsRealises[] = $filmsRealises;
     }
     
-    public function afficherFilmsRealises(array $filmsRealises){
+    public function afficherFilmsRealises(){
         $result = "Le réalisateur " .$this->getPrenom() .$this->getNom(). " a réalisé les films : ";
-        foreach($this->_filmsRealises as $filmsRealises){
-            $result .= $this->_filmsRealises. "<br>";
+        foreach($this->_filmsRealises as $film){
+            $result .= $film. "<br>";
         }
         return $result;
     }

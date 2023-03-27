@@ -30,7 +30,7 @@
         foreach($this->_filmsGenre as $film){
         $result .= "- $film<br>";
     }
-        return $result;
+        return $result ."<br>";
     }
 
     // Méthode __toString de la classe
