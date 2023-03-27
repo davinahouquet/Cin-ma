@@ -38,7 +38,7 @@
         return $this->_genre;
     }
     public function addGenre(Film $film){
-        $this->_FilmsGenre[] = $film;
+        $this->_filmsGenre[] = $film;
     }
 }
 ?>

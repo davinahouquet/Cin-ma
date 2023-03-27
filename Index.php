@@ -81,10 +81,14 @@ $batmanEtRobinCasting = new Casting ($batmanEtRobin, $batgirl, $aliciaSilverston
 echo $batmanForever->afficherCasting();
 echo $batmanEtRobin->afficherCasting();
 echo $batmanLeDefi->afficherCasting();
+
 // Test du listage des films par genre
 echo $SF->listerFilmsGenre();
+
 // Test du listage de la filmographie d'un acteur
-echo $timBurton->afficherFilmsRealises();
+// echo $timBurton->afficherFilmsRealises();
+// echo $joelSchumacher->afficherFilmsRealises();
+
 // Test du listage de la filmographie d'un réalisateur
 
 ?>

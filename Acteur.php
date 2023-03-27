@@ -8,7 +8,6 @@ class Acteur{
     private array $_Casting;
 
 
-
     public function __construct(string $nom, string $prenom, string $sexe, string $dateNaissance){
         $this->_Nom = $nom;
         $this->_Prenom = $prenom;
@@ -50,5 +49,7 @@ class Acteur{
     {
         return $this->getprenom(). " " .$this->getNom();
     }
+
+
 }
 ?>

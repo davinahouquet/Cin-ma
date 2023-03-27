@@ -5,13 +5,14 @@ class Realisateur{
     private string $_Prenom;
     private string $_Sexe;
     private string $_DateNaissance;
-    private Film $_Film;
+    private array $_filmsRealises;
 
     public function __construct(string $nom, string $prenom, string $sexe, string $dateNaissance){
         $this->_Nom = $nom;
         $this->_Prenom = $prenom;
         $this->_Sexe = $sexe;
         $this->_DateNaissance = $dateNaissance;
+        $this->_filmsRealises =[];
     }
 
     public function getNom(){
@@ -40,14 +41,20 @@ class Realisateur{
         $this->_DateNaissance = $dateNaissance;
     }
 
-    public function getInfos(){
-
+    public function __toString(){
+        return $this->getprenom(). " " .$this->getNom();
     }
 
-    // public function __toString()
-    // {
-        
-    // }
-
+    public function addFilmsRealises(Film $filmsRealises){
+        return $this->_filmsRealises[] = $filmsRealises;
+    }
+    
+    public function afficherFilmsRealises(array $filmsRealises){
+        $result = "Le réalisateur " .$this->getPrenom() .$this->getNom(). " a réalisé les films : ";
+        foreach($this->_filmsRealises as $filmsRealises){
+            $result .= $this->_filmsRealises. "<br>";
+        }
+        return $result;
+    }
 }
-    ?>
+?>

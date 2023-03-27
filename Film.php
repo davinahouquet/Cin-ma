@@ -9,6 +9,7 @@ class Film
     private string $_Synopsis;
     private Genre $_genre;
     private array $_Casting;
+    private array $_filmsRealises;
 
     public function __construct(string $titre, string $dateSortie, int $duree, $realisateur, string $synopsis, Genre $genre)
     {
@@ -16,6 +17,8 @@ class Film
         $this->_DateSortie = $dateSortie;
         $this->_Duree = $duree;
         $this->_Realisateur = $realisateur;
+        $this->_Realisateur->addFilmsRealises($this);
+        $this->_filmsRealises = [];
         $this->_Synopsis = $synopsis;
         $this->_genre = $genre;
         $this->_genre->addGenre($this);
@@ -35,7 +38,7 @@ class Film
     {
         return $this->_DateSortie;
     }
-    public function setDateSortie(string $_DateSortie){
+    public function setDateSortie(string $dateSortie){
         $this->_DateSortie = $dateSortie;
     }
 
@@ -69,8 +72,9 @@ class Film
 
     public function getGenre(): Genre
     {
-        return $this->_genre->getGenre();
+        return $this->_genre;
     }
+
     public function setGenre(Genre $genre)
     {
         $this->_genre = $genre;
@@ -88,17 +92,13 @@ class Film
         foreach ($this->_Casting as $casting) {
             $result .=  ", le rôle de " . $casting->getRole()->getRoleNom() . " a été incarné par " . $casting->getActeur() . " ";
         }
-        return $result. ".";
+        return $result. ".<br>";
     }
 
     //Méthode _toString()
     public function __toString(){
-        return $this->_titre;
+        return $this->getTitre();
     }
 
-    public function addGenre(Genre $genre)
-    {
-        $this->_filmsGenre[] = getfilmsGenre();
-    }
 }
 ?>
