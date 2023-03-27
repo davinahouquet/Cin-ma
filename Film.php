@@ -5,17 +5,20 @@ class Film
     private string $_Titre;
     private string $_DateSortie;
     private int $_Duree;
-    private $_Realisateur;
+    private Realisateur $_Realisateur;
     private string $_Synopsis;
+    private Genre $_genre;
     private array $_Casting;
 
-    public function __construct(string $titre, string $dateSortie, int $duree, $realisateur, string $synopsis)
+    public function __construct(string $titre, string $dateSortie, int $duree, $realisateur, string $synopsis, Genre $genre)
     {
         $this->_Titre = $titre;
         $this->_DateSortie = $dateSortie;
         $this->_Duree = $duree;
         $this->_Realisateur = $realisateur;
         $this->_Synopsis = $synopsis;
+        $this->_genre = $genre;
+        $this->_genre->addGenre($this);
         $this->_Casting = [];
     }
 
@@ -60,6 +63,21 @@ class Film
     {
         $this->_Synopsis = $synopsis;
     }
+    public function getGenre(): string
+    {
+        return $this->_genre->getNomGenre();
+    }
+    public function setGenre(string $genre)
+    {
+        $this->_genre = $genre;
+    }
+
+    // public function getGenre(){
+    //     return $this->_genre;
+    // }
+    // public function setGenre(string $genre){
+    //     $this->_genre = $genre;
+    // }
     //Méthodes pour ajouterTableau
     public function addCasting(Casting $casting)
     {
@@ -72,6 +90,10 @@ class Film
         foreach ($this->_Casting as $casting) {
             $result .=  ", le rôle de " . $casting->getRole()->getRoleNom() . " a été incarné par " . $casting->getActeur() . " ";
         }
-        return $result;
+        return $result. ".";
+    }
+    public function __toString(){
+        return $this->_titre;
     }
 }
+?>

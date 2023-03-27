@@ -21,15 +21,15 @@ function chargerClasse($classe)
 spl_autoload_register('chargerClasse');
 
 //IMPORTANT : Il faut déclarer les $variables dans l'ordre (sinon undefined variable) = les déclarer d'abord pour s'en servir dans les lignes dessous
-
+$SF = new Genre ("SF");
 //Création de différents réalisateurs
 $timBurton = new Realisateur ("Burton", "Tim", "Homme", "25 août 1958");
 $joelSchumacher = new Realisateur ("Schumacher", "Joel ", "Homme", "22 juin 2020");
 
 //Création de différents films
-$batmanLeDefi = new Film ("Batman : Le Défi", "1992", 126, $timBurton, "Synopsis");
-$batmanForever = new Film ("Batman Forever", "1995", 121, $joelSchumacher, "Synopsis");
-$batmanEtRobin = new Film ("Batman et Robin", "1997", 125, $joelSchumacher, "Synopsis");
+$batmanLeDefi = new Film ("Batman : Le Défi", "1992", 126, $timBurton, $SF, "Synopsis");
+$batmanForever = new Film ("Batman Forever", "1995", 121, $joelSchumacher, $SF, "Synopsis");
+$batmanEtRobin = new Film ("Batman et Robin", "1997", 125, $joelSchumacher, $SF, "Synopsis");
 
 //Création de différents acteurs
 $michaelKeaton = new Acteur ("Keaton", "Michael", "Homme", "5 septembre 1951");
@@ -47,6 +47,7 @@ $aliciaSilverstone = new Acteur ("Silverstone", "Alicia", "Femme", "4 octobre 19
 //Création de différents genre
 
 //Création de différents rôles
+
 $batman = new Role("Batman", $michaelKeaton);
 $catwoman = new Role("Catwoman", $michellePfeiffer);
 $oswaldcobblepot = new Role("Oswald Cobblepot", $dannyDeVito);
@@ -72,6 +73,7 @@ $batmanEtRobinCasting = new Casting ($batmanEtRobin, $batman, $georgeClooney);
 $batmanEtRobinCasting = new Casting ($batmanEtRobin, $poisonIvy, $umaThurman);
 $batmanEtRobinCasting = new Casting ($batmanEtRobin, $batgirl, $aliciaSilverstone);
 
+
 // $casting1 = new Casting ($film1, $role1, $acteur1);
 // $casting1 = new Casting ($film1, $role1, $acteur1);
 
@@ -79,6 +81,8 @@ $batmanEtRobinCasting = new Casting ($batmanEtRobin, $batgirl, $aliciaSilverston
 // echo $batmanForever->afficherCasting();
 // echo $batmanEtRobin->afficherCasting();
 echo $batmanLeDefi->afficherCasting();
+echo $SF->listerFilmsGenre();
+
 // $role1 = new Role()
 
 /* Série de tests de méthodes */
