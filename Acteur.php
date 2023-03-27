@@ -6,7 +6,7 @@ class Acteur{
     private string $_Sexe;
     private string $_DateNaissance;
     private array $_Casting;
-
+    private array $_filmsJoues;
 
     public function __construct(string $nom, string $prenom, string $sexe, string $dateNaissance){
         $this->_Nom = $nom;
@@ -14,6 +14,7 @@ class Acteur{
         $this->_Sexe = $sexe;
         $this->_DateNaissance =$dateNaissance;
         $this->_Casting = [];
+        $this->_filmsJoues =[];
     }
     public function getNom(){
         return $this->_Nom;
@@ -50,7 +51,16 @@ class Acteur{
         return $this->getprenom(). " " .$this->getNom();
     }
 
+    public function addFilmsJoues(Film $filmsJoues){
+        return $this->_filmsJoues[] = $filmsJoues;
+    }
     //Fonction qui affiche la filmographie d'un acteur
-
+    public function afficherFilmsJoues(){
+        $result = "L'acteur " .$this->getPrenom(). " " .$this->getNom(). " a joué dans les films : ";
+        foreach($this->_filmsJoues as $film){
+            $result .= $film->getTitre(). "<br>";
+        }
+        return $result;
+    }
 }
 ?>

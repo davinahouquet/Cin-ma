@@ -91,5 +91,5 @@ echo $timBurton->afficherFilmsRealises();
 echo $joelSchumacher->afficherFilmsRealises();
 
 // Test du listage de la filmographie d'un acteur
-
+echo $valKilmer->afficherFilmsJoues();
 ?>

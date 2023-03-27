@@ -54,7 +54,7 @@ class Realisateur{
         foreach($this->_filmsRealises as $film){
             $result .= $film. "<br>";
         }
-        return $result;
+        return $result."<br>";
     }
 }
 ?>

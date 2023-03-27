@@ -33,9 +33,4 @@ class Casting{
     public function setActeur($acteur){
         $this->_Acteur = $acteur;
     }
-    /*Fonction qui permet de lister le casting d'un film
-    (Dans tel film, ce rôle a été incarné par cet acteur, ce rôle a été incarné par cet acteur...)*/
-    // public function afficherCasting(){
-    //     $result = "Dans le film " .$this->getFilm(). ", le rôle de " .$this->getRole(). " a été incarné par " .$this->getActeur(). " .";
-    //     return $result;}
 }

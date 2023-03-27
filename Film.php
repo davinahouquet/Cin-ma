@@ -92,7 +92,7 @@ class Film
         foreach ($this->_Casting as $casting) {
             $result .=  ", le rôle de " . $casting->getRole()->getRoleNom() . " a été incarné par " . $casting->getActeur() . " ";
         }
-        return $result. ".<br>";
+        return $result. ".<br><br>";
     }
 
     //Méthode _toString()
