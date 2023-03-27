@@ -25,14 +25,18 @@ spl_autoload_register('chargerClasse');
 //Création de différents genres
 $SF = new Genre ("SF");
 $Policier = new Genre ("Policier");
+$comedie = new Genre ("Comédie");
+
 //Création de différents réalisateurs
 $timBurton = new Realisateur ("Burton", "Tim", "Homme", "25 août 1958");
 $joelSchumacher = new Realisateur ("Schumacher", "Joel ", "Homme", "22 juin 2020");
+$Mcg = new Realisateur ("McGinty", "Joseph", "Homme", "12 juin 1986");
 
 //Création de différents films
 $batmanLeDefi = new Film ("Batman : Le Défi", "1992", 126, $timBurton, "Synopsis", $SF);
 $batmanForever = new Film ("Batman Forever", "1995", 121, $joelSchumacher,"Synopsis", $SF);
 $batmanEtRobin = new Film ("Batman et Robin", "1997", 125, $joelSchumacher, "Synopsis", $SF);
+$charlie = new Film ("Charlie et ses drôles de Dames", "2000", 125, $Mcg, "Synopsis", $comedie);
 
 //Création de différents acteurs
 $michaelKeaton = new Acteur ("Keaton", "Michael", "Homme", "5 septembre 1951");
@@ -60,6 +64,7 @@ $batman = new Role("Batman", $georgeClooney);
 $poisonIvy = new Role ("Poison Ivy", $umaThurman);
 $batgirl = new Role("Batgirl", $aliciaSilverstone);
 
+$dylanSanders = new Role ("Dylan Sanders", $drewBarrymore);
 //Création de différents casting
 $batmanLeDefiCasting = new Casting ($batmanLeDefi, $batman, $michaelKeaton);
 $batmanLeDefiCasting1 = new Casting ($batmanLeDefi, $catwoman, $michellePfeiffer);
@@ -73,6 +78,7 @@ $batmanEtRobinCasting = new Casting ($batmanEtRobin, $batman, $georgeClooney);
 $batmanEtRobinCasting = new Casting ($batmanEtRobin, $poisonIvy, $umaThurman);
 $batmanEtRobinCasting = new Casting ($batmanEtRobin, $batgirl, $aliciaSilverstone);
 
+$charlieCasting = new Casting ($charlie, $dylanSanders, $drewBarrymore);
 
 /* Série de tests de méthodes */
 // Test du listage des acteurs ayant incarné le même rôle
@@ -94,4 +100,6 @@ echo $joelSchumacher->afficherFilmsRealises();
 echo $valKilmer->afficherFilmsJoues();
 echo $georgeClooney->afficherFilmsJoues();
 echo $umaThurman->afficherFilmsJoues();
+echo $michellePfeiffer->afficherFilmsJoues();
+echo $drewBarrymore->afficherFilmsJoues();
 ?>

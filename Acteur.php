@@ -56,12 +56,12 @@ class Acteur{
     }
     //Fonction qui affiche la filmographie d'un acteur = On réutilise _Casting qui était déjà créé
     public function afficherFilmsJoues(){
-        $result = "<p>". $this->getNom() . " " . $this->getPrenom() . " a joué dans : ";
+        $result = "<p>". $this->getPrenom() . " " . $this->getNom() . " a joué dans : ";
         foreach($this->_Casting as $film)
     {
-        $result .= $film->getFilm() . ".";
+        $result .= $film->getFilm() . " ";
     }
-    return $result;
+    return $result." ";
 }
 }
 ?>
