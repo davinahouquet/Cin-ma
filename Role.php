@@ -29,6 +29,16 @@ class Role{
     public function addCasting(Casting $casting){
     $this->_Casting[] = $casting;
 }
-
+    //Fonction pour afficher les acteurs ayant incarné le même rôle
+    public function listerActeursRole(){
+     $result = "<br>Les acteurs ayant joué le rôle de " . $this->_RoleNom . " :<br>";
+        foreach($this->_Casting as $casting){
+        $result .= "- " . $casting->getActeur(). "<br>";
+    }
+    return $result;
+}
+public function __toString(){
+    return $this->_RoleNom;
+}
 }
 ?>

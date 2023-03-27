@@ -91,7 +91,7 @@ echo $batmanLeDefi->afficherCasting();
 
 // Test du listage des films par genre
 echo $SF->listerFilmsGenre();
-
+echo $comedie->listerFilmsGenre();
 // Test du listage de la filmographie d'un réalisateur
 echo $timBurton->afficherFilmsRealises();
 echo $joelSchumacher->afficherFilmsRealises();
@@ -102,4 +102,6 @@ echo $georgeClooney->afficherFilmsJoues();
 echo $umaThurman->afficherFilmsJoues();
 echo $michellePfeiffer->afficherFilmsJoues();
 echo $drewBarrymore->afficherFilmsJoues();
+
+echo $batman->listerActeursRole();
 ?>

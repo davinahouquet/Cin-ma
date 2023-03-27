@@ -61,7 +61,7 @@ class Acteur{
     {
         $result .= $film->getFilm() . " ";
     }
-    return $result." ";
+    return $result." <br>";
 }
 }
 ?>
