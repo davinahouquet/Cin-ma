@@ -84,7 +84,7 @@ echo $batmanLeDefi->afficherCasting();
 // Test du listage des films par genre
 echo $SF->listerFilmsGenre();
 // Test du listage de la filmographie d'un acteur
-
+echo $timBurton->afficherFilmsRealises();
 // Test du listage de la filmographie d'un réalisateur
 
 ?>

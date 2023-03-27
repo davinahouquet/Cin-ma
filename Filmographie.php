@@ -1,6 +1,6 @@
 <?php
 
-class Filmogrpahie{
+class Filmographie{
     private array $_filmsActeur;
     private array $_filmsRealisateur;
 
@@ -9,7 +9,7 @@ class Filmogrpahie{
 //On va mettre en lien ces deux classes
     public function __construct(array $filmsRealisateur){
         $this->_filmsRealisateur = [];
-        $this->_filmsActeur = [];
+        // $this->_filmsActeur = [];
     }
     public function getFilmsRealises(){
         return $this->_filmsRealisateur;
@@ -26,10 +26,10 @@ class Filmogrpahie{
 
     //Fonction qui liste la filmographie d'un réalisateur
 
-    // public function afficherFilmsRealises(array $filmsRealises){
-    //     foreach($filmsRealises as $this->_FilmsRealises){
-    //         echo $this->_FilmsRealises. "<br>";
-    //     }
-    // }
+    public function afficherFilmsRealises(array $filmsRealises){
+        foreach($filmsRealises as $this->_FilmsRealises){
+            echo $this->_FilmsRealises. "<br>";
+        }
+    }
 }
 ?>
