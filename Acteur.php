@@ -5,7 +5,7 @@ class Acteur{
     private string $_Prenom;
     private string $_Sexe;
     private string $_DateNaissance;
-    private array $_Casting;
+    private array $_castings;
     private array $_filmsJoues;
 
     public function __construct(string $nom, string $prenom, string $sexe, string $dateNaissance){
@@ -13,7 +13,7 @@ class Acteur{
         $this->_Prenom = $prenom;
         $this->_Sexe = $sexe;
         $this->_DateNaissance =$dateNaissance;
-        $this->_Casting = [];
+        $this->_castings = [];
         $this->_filmsJoues =[];
     }
     public function getNom(){
@@ -43,7 +43,7 @@ class Acteur{
     }
 
     public function addCasting(Casting $casting){
-        $this->_Casting[] = $casting;
+        $this->_castings[] = $casting;
     }
 
     public function __toString()
@@ -54,14 +54,13 @@ class Acteur{
     public function addFilmsJoues(Film $filmsJoues){
         return $this->_filmsJoues[] = $filmsJoues;
     }
-    //Fonction qui affiche la filmographie d'un acteur = On réutilise _Casting qui était déjà créé
+    //Fonction qui affiche la filmographie d'un acteur = On réutilise _castings qui était déjà créé
     public function afficherFilmsJoues(){
         $result = "<p>". $this->getPrenom() . " " . $this->getNom() . " a joué dans : ";
-        foreach($this->_Casting as $film)
+        foreach($this->_castings as $film)
     {
         $result .= $film->getFilm() . " ";
     }
     return $result." <br>";
 }
 }
-?>
